@@ -6,7 +6,6 @@ function App() {
     <div className="App">
       {/* Accordian Component */}
       <Accordian/>
-      <p>Hello how are you, i am fine</p>
     </div>
   );
 }
