@@ -11,7 +11,6 @@ export default function Accordian() {
 
     function handleSingleSelection(getCurrentId){
         setSelected(getCurrentId === selected ? null : getCurrentId);
-        console.log("Current ID Value is: " + selected)
     }
 
     function handleMultiSelection(getCurrentId){
@@ -23,8 +22,6 @@ export default function Accordian() {
         
         setMultiple(copyMultiple);
     }
-
-    console.log("selected is: " + selected , "multiple is: " + multiple)
 
     return (
     <div className="wrapper">
