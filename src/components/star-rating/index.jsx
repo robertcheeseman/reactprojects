@@ -1,7 +1,7 @@
 // installed react icons package:  'npm i react-icons' is the command for terminal
+import { useState } from 'react'
 import {FaStar} from 'react-icons/fa'
 import './styles.css'
-import { useState } from 'react'
 
 export default function StarRating({numOfStars = 5}) {
 
@@ -28,7 +28,7 @@ export default function StarRating({numOfStars = 5}) {
         <div className='star-rating'>
             {
                 [...Array(numOfStars)].map((_,index) => {
-                    index += 1
+                    index += 1;
 
                     return ( <FaStar
                     key={index}
