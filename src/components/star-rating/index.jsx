@@ -9,18 +9,20 @@ export default function StarRating({numOfStars = 5}) {
     const [hover, setHover] = useState(0);
 
     function handleClick(getCurrentIndex) {
-        console.log(getCurrentIndex)
+        console.log(getCurrentIndex);
+        setRating(getCurrentIndex);
     }
 
     function handleMouseEnter(getCurrentIndex) {
-        console.log(getCurrentIndex)
+        console.log(getCurrentIndex);
+        setHover(getCurrentIndex);
     }
 
     function handleMouseLeave(getCurrentIndex) {
-        console.log(getCurrentIndex)
+        console.log(getCurrentIndex);
+        setHover(rating);
     }
 
-    console.log("num of stars is: " + numOfStars)
 
     return (
         <div className='star-rating'>
@@ -28,18 +30,16 @@ export default function StarRating({numOfStars = 5}) {
                 [...Array(numOfStars)].map((_,index) => {
                     index += 1
 
-                    return <FaStar
+                    return ( <FaStar
                     key={index}
+                    className={index <= (hover || rating) ? 'active' : 'inactive'}
                     onClick={() => handleClick(index)}
                     onMouseMove={() => handleMouseEnter(index)}
-                    onMouseLeave={() => handleMouseLeave(index)}
+                    onMouseLeave={() => handleMouseLeave()}
                     size = {40}
-                    />
-                })
-
-                
-            }
-            
+                    />);
+                })          
+            }        
         </div>
     )
 }
