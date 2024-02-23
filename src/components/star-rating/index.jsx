@@ -20,6 +20,8 @@ export default function StarRating({numOfStars = 5}) {
         console.log(getCurrentIndex)
     }
 
+    console.log("num of stars is: " + numOfStars)
+
     return (
         <div className='star-rating'>
             {
@@ -34,7 +36,10 @@ export default function StarRating({numOfStars = 5}) {
                     size = {40}
                     />
                 })
+
+                
             }
+            
         </div>
     )
 }
