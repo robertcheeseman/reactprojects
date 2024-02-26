@@ -1,5 +1,6 @@
 import './App.css';
 import Accordian from './components/accordian';
+import ImageSlider from './components/image-slider';
 import RandomColor from './components/random-color';
 import StarRating from './components/star-rating';
 
@@ -13,7 +14,10 @@ function App() {
       {/* <RandomColor/> */}
       
       {/* {Star Rating Component} */}
-      <StarRating numOfStars={10}/>
+      {/* <StarRating numOfStars={10}/> */}
+
+      {/* {Image Slider Component} */}
+      <ImageSlider/>
     </div>
   );
 }
