@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 
-export default function ImageSlider({url, limit}) {
+export default function ImageSlider({url, limit = 5, page = 1}) {
 
     const [images, setImages] = useState([]);
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -12,7 +12,7 @@ export default function ImageSlider({url, limit}) {
         try {
             setLoading(true)
 
-            const response = await fetch(getURL);
+            const response = await fetch(`${getUrl}?page=${page}&limit=${limit}`);
             const data = await response.json();
 
             if(data) {
