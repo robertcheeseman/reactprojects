@@ -44,7 +44,27 @@ export default function ImageSlider({url, limit = 5, page = 1}) {
 
     return (
         <div className="container">
-            
+            <BsArrowLeftCircleFill className="arrow arrow-left"/>
+            {
+                images && images.length ? images.map((imageItem) => (
+                    <img
+                    key={imageItem.id}
+                    alt={imageItem.download_url}
+                    src={imageItem.download_url}
+                    className="current-image"
+                    />
+                )) : null
+            }
+            <BsArrowRightCircleFill className="arrow arrow-right"/>
+            <span className="circle-indicators">
+                {
+                    images && images.length ? 
+                    images.map((_, index) => (
+                        <button key={index} className="current-indicator"></button>
+                    ))
+                    : null
+                }
+            </span>
         </div>
     )
 }
