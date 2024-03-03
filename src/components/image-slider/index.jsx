@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import {BsArrowLeftCircleFill, BsArrowRightCircleFill} from 'react-icons/bs';
 
 
 export default function ImageSlider({url, limit = 5, page = 1}) {
@@ -31,6 +32,8 @@ export default function ImageSlider({url, limit = 5, page = 1}) {
         if (url !== '') fetchImages(url);
     }, [url]);
 
+    console.log(images)
+
     if(loading) {
         return <div>Loading data, please wait</div>
     }
@@ -40,6 +43,8 @@ export default function ImageSlider({url, limit = 5, page = 1}) {
     }
 
     return (
-        <div className="container">Image Slider</div>
+        <div className="container">
+            
+        </div>
     )
 }
