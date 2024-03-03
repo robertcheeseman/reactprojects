@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import {BsArrowLeftCircleFill, BsArrowRightCircleFill} from 'react-icons/bs';
+import "./styles.css"
 
 
 export default function ImageSlider({url, limit = 5, page = 1}) {
