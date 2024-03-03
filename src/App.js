@@ -17,7 +17,7 @@ function App() {
       {/* <StarRating numOfStars={10}/> */}
 
       {/* {Image Slider Component} */}
-      <ImageSlider/>
+      <ImageSlider url={'https://picsum.photos/v2/list'} limit={'10'}/>
     </div>
   );
 }

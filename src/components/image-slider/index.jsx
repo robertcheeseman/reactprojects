@@ -31,6 +31,14 @@ export default function ImageSlider({url, limit}) {
         if (url !== '') fetchImages(url);
     }, [url]);
 
+    if(loading) {
+        return <div>Loading data, please wait</div>
+    }
+
+    if (errorMsg !== null) {
+        return <div>Error Occured ! {errorMsg} </div>
+    }
+
     return (
         <div className="container">Image Slider</div>
     )
