@@ -38,12 +38,13 @@ export default function LoadMoreData() {
 
     return (
         <div className="container">Load More Data
-            <div>
+            <div className="product-container">
             {
                 products && products.length ?
                 products.map((item) => (
-                    <div key={item.id}>
+                    <div className="product" key={item.id}>
                         <img src={item.thumbnail} alt={item.title} />
+                        <p>{item.title}</p>
                     </div>
                 )) : null
             }
