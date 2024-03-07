@@ -14,8 +14,16 @@ export default function LoadMoreData() {
 
             const result = await response.json();
 
-        } catch {
+            if (result && result.products && result.products.length) {
+                setProducts(result.products)
+                setLoading(false)
+            }
+
+            console.log(result);
+
+        } catch (e) {
             console.log(e)
+            setLoading(false)
         }
     }
 
@@ -23,8 +31,24 @@ export default function LoadMoreData() {
         fetchProducts()
     },[])
 
+    if(loading) {
+        return <div>Loading Data, Please Wait.</div>
+    }
+
 
     return (
-        <div className="container">Load More Data</div>
+        <div className="container">Load More Data
+            <div>
+            {
+                products && products.length ?
+                products.map((item) => (
+                    <div key={item.id}>
+                        <img src={item.thumbnail} alt={item.title} />
+                    </div>
+                )) : null
+            }
+            </div>
+        
+        </div>
     )
 }
