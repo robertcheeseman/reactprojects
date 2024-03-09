@@ -43,7 +43,7 @@ export default function LoadMoreData() {
 
 
     return (
-        <div className="load-more-container">Load More Data
+        <div className="load-more-container">
             <div className="product-container">
             {
                 products && products.length ?
