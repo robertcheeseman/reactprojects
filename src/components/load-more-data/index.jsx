@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import "./styles.css"
 
 
 export default function LoadMoreData() {
@@ -37,7 +38,7 @@ export default function LoadMoreData() {
 
 
     return (
-        <div className="container">Load More Data
+        <div className="load-more-container">Load More Data
             <div className="product-container">
             {
                 products && products.length ?
