@@ -21,7 +21,11 @@ function App() {
       {/* <ImageSlider url={'https://picsum.photos/v2/list'} page = {'1'} limit={'4'}/> */}
 
       {/* {Load More Data Component} */}
-      <LoadMoreData/>
+      {/* <LoadMoreData/> */}
+
+      {/* {Tree View Component} */}
+      <treeView/>
+      
     </div>
   );
 }
