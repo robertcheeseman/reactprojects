@@ -4,6 +4,8 @@ import ImageSlider from './components/image-slider';
 import LoadMoreData from './components/load-more-data';
 import RandomColor from './components/random-color';
 import StarRating from './components/star-rating';
+import TreeView from './components/tree-view';
+
 
 function App() {
   return (
@@ -24,7 +26,8 @@ function App() {
       {/* <LoadMoreData/> */}
 
       {/* {Tree View Component} */}
-      <treeView/>
+      <TreeView/>
+      
       
     </div>
   );
