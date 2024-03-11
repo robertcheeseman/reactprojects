@@ -5,6 +5,7 @@ import LoadMoreData from './components/load-more-data';
 import RandomColor from './components/random-color';
 import StarRating from './components/star-rating';
 import TreeView from './components/tree-view';
+import menus from './components/tree-view/data';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
       {/* <LoadMoreData/> */}
 
       {/* {Tree View Component} */}
-      <TreeView/>
+      <TreeView menus={menus}/>
       
       
     </div>
