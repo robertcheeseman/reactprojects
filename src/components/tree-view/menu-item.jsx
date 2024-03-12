@@ -18,11 +18,11 @@ import {FaMinus, FaPlus} from 'react-icons/fa'
     return (
     
     <li>
-        <div style={{display : 'flex', gap : '20px'}}>
+        <div className="menu-item" style={{display : 'flex', gap : '20px'}}>
             <p>{item.label}</p>
             {item && item.children && item.children.length ? (<span onClick={() => handleToggleChildren(item.label)}>
             {
-                displayCurrentChildren[item.label] ? '-' : '+'
+                displayCurrentChildren[item.label] ? <FaMinus/> : <FaPlus/>
             }
 
             </span>) : null}
