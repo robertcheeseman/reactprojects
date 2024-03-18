@@ -1,4 +1,5 @@
 import { useState } from "react";
+// npm i react-qr-code to install react qr code genreator component package
 import QRCode from "react-qr-code";
 
 
