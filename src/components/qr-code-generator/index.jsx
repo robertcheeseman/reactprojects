@@ -3,6 +3,6 @@
 export default function QrCodeGenerator() {
 
     return (
-        <div>QR Code Generator</div>
+        <div>QR Code Generator </div>
     )
 }
