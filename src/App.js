@@ -39,7 +39,7 @@ function App() {
       {/* <LightDarkMode /> */}
 
       {/* Scroll Indicator Component */}
-      <ScrollIndicator />
+      <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>
 
       
       
