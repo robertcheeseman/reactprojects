@@ -5,6 +5,7 @@ import LightDarkMode from './components/light-dark-mode';
 import LoadMoreData from './components/load-more-data';
 import QrCodeGenerator from './components/qr-code-generator';
 import RandomColor from './components/random-color';
+import ScrollIndicator from './components/scroll-indicator';
 import StarRating from './components/star-rating';
 import TreeView from './components/tree-view';
 import menus from './components/tree-view/data';
@@ -35,7 +36,10 @@ function App() {
       {/* <QrCodeGenerator /> */}
 
       {/* Light Dark Mode Component */}
-      <LightDarkMode />
+      {/* <LightDarkMode /> */}
+
+      {/* Scroll Indicator Component */}
+      <ScrollIndicator />
 
       
       
