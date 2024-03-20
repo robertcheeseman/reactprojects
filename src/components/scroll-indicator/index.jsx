@@ -30,10 +30,20 @@ export default function ScrollIndicator({url}) {
         fetchData(url);
     }, [url]);
 
-    console.log(data, loading);
+    console.log(data, scrollPercentage);
 
     function handleScrollPercentage() {
-        
+        console.log(
+            document.body.scrollTop, 
+            document.documentElement.scrollTop, 
+            document.documentElement.scrollHeight, 
+            document.documentElement.clientHeight);
+
+            const howMuchScrolled = document.body.scrollTop || document.documentElement.scrollTop;
+
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+            setScrollPercentage((howMuchScrolled / height)*100);
     }
 
     useEffect(() => {
