@@ -1,6 +1,6 @@
 // this is a custom hook?
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function useLocalStorage(key, defaultValue) {
@@ -9,7 +9,8 @@ export default function useLocalStorage(key, defaultValue) {
 
         try {
 
-            currentValue = JSON.parse(localStorage.getItem(key) || String(defaultValue));
+            currentValue = JSON.parse(
+                localStorage.getItem(key) || String(defaultValue));
 
         } catch(error) {
         console.log(error);
@@ -17,5 +18,12 @@ export default function useLocalStorage(key, defaultValue) {
         }    
 
         return currentValue;
-});
+    });
+
+
+    useEffect(() => {
+        localStorage.setItem(key, JSON.stringify(value));
+    }, [key, value]);
+
+    return [value, setValue];
 }
