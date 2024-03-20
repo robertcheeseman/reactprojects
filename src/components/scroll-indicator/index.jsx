@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import './scroll.css'
+import "./scroll.css";
 
 export default function ScrollIndicator({ url }) {
   const [data, setData] = useState([]);
@@ -56,11 +56,11 @@ export default function ScrollIndicator({ url }) {
   console.log(data, scrollPercentage);
 
   if(errorMessage) {
-    return <div>Error! {errorMessage}</div>
+    return <div>Error! {errorMessage}</div>;
   }
 
   if(loading) {
-    return <div>Loading Data, Please Wait</div>
+    return <div>Loading Data, Please Wait</div>;
   }
 
   return (
@@ -73,12 +73,12 @@ export default function ScrollIndicator({ url }) {
             style={{ width: `${scrollPercentage}%` }}
           ></div>
         </div>
-        <div className="data-container">
+      </div>
+      <div className="data-container">
           {data && data.length > 0
             ? data.map((dataItem) => <p>{dataItem.title}</p>)
             : null}
         </div>
-      </div>
     </div>
   );
 }
