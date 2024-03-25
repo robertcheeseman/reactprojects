@@ -17,7 +17,7 @@ export default function CustomTabs({ tabsContent, onChange }) {
           </div>
         ))}
       </div>
-      <div className="content">
+      <div className="content" style={{color : 'red'}}>
         {tabsContent[currentTabIndex] && tabsContent[currentTabIndex].content}
       </div>
     </div>
