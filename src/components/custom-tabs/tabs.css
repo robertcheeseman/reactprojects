@@ -1,2 +1,9 @@
-/* css */
+.wrapper {
+    padding: 8px;
+}
 
+.heading {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./tabs.css"
 
 export default function CustomTabs({ tabsContent, onChange }) {
   const [currentTabIndex, setCurrentTabIndex] = useState(0);
@@ -12,7 +13,7 @@ export default function CustomTabs({ tabsContent, onChange }) {
     <div className="wrapper">
       <div className="heading">
         {tabsContent.map((tabItem, index) => (
-          <div onClick={() => handleOnClick(index)} key={tabItem.label}>
+          <div className={`tab-item ${currentTabIndex === index ? "active" : ""}`} onClick={() => handleOnClick(index)} key={tabItem.label}>
             <span className="label">{tabItem.label}</span>
           </div>
         ))}
