@@ -1,5 +1,6 @@
 import './App.css';
 import Accordian from './components/accordian';
+import { ModalPopup } from './components/custom-modal-popup/modal';
 import TabTest from './components/custom-tabs/tab-test';
 import CustomTabs from './components/custom-tabs/tabs';
 import ImageSlider from './components/image-slider';
@@ -44,7 +45,11 @@ function App() {
       {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/> */}
 
       {/* Custom Tabs Component */}
-      <TabTest />
+      {/* <TabTest /> */}
+
+      {/* Custom Modal Popup Component */}
+      <ModalPopup />
+
 
       
       
