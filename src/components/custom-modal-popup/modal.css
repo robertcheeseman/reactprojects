@@ -7,6 +7,16 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: black;
+    background-color: rgb(98, 193, 47);
+
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid red;
+    width: 80%;
 
 }
