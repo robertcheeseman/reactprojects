@@ -3,6 +3,6 @@ import './styles.css'
 
 export default function GithubProfileFinder() {
     return (
-        <div>github profile </div>
+        <div>github profile finder</div>
     )
 }
