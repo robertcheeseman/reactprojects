@@ -5,11 +5,18 @@ import './styles.css'
 export default function GithubProfileFinder() {
     
     const [userName, setUserName] = useState('robertcheeseman');
+    const [userData, setUserData] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     async function fetchGithubUserData() {
+        setLoading(true)
         const response = await fetch(`https://api.github.com/users/${userName}`);
 
         const data = response.json();
+        if(data) {
+            setUserData(data)
+            setLoading(false)
+        }
 
         console.log(data);
     }
@@ -20,7 +27,11 @@ export default function GithubProfileFinder() {
 
     useEffect(()=> {
         fetchGithubUserData()
-    }, [])
+    }, []);
+
+    if(loading) {
+        return <h1>Loading Data! Please wait!</h1>
+    }
 
 
     return (
