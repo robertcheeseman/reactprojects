@@ -7,7 +7,11 @@ export default function GithubProfileFinder() {
     const [userName, setUserName] = useState('robertcheeseman');
 
     async function fetchGithubUserData() {
-        const response = await fetch(`https://api.github.com/users/${userName}`)
+        const response = await fetch(`https://api.github.com/users/${userName}`);
+
+        const data = response.json();
+
+        console.log(data);
     }
 
     function handleSubmit() {
