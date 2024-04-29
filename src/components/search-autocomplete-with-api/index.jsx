@@ -4,6 +4,7 @@ export default function SearchAutocomplete() {
   const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState([]);
   const [error, setError] = useState(null);
+  const [searchParam, setSearchParam] = useState('');
 
   async function fetchListOfUsers() {
     try {
