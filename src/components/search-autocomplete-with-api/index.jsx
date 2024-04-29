@@ -5,6 +5,21 @@ export default function SearchAutocomplete() {
   const [users, setUsers] = useState([]);
   const [error, setError] = useState(null);
   const [searchParam, setSearchParam] = useState('');
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [filteredUsers, setFilteredUsers] = useState('');
+
+  function handleChange(event) {
+    const query = event.target.value.toLowerCase()
+    setSearchParam(query);
+    if(query > 1) {
+        const filteredData = users && users.length ? users.filter(item => item.toLowerCase().indexOf(query) > -1) : [];
+        setFilteredUsers(filteredData);
+        setShowDropdown(true);
+    } else {
+        setShowDropdown(false);
+
+    }
+  }
 
   async function fetchListOfUsers() {
     try {
@@ -29,11 +44,11 @@ export default function SearchAutocomplete() {
     fetchListOfUsers();
   }, []);
 
-  console.log(users)
+  console.log(users, filteredUsers)
 
   return (
     <div className="search-autocomplete-container">
-      <input type="text" name="search-users" placeholder="Search Users Here" />
+      <input value={searchParam} type="text" name="search-users" placeholder="Search Users Here" onChange={handleChange}/>
     </div>
   );
 }
