@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Suggestions from "./suggestions";
 
 export default function SearchAutocomplete() {
   const [loading, setLoading] = useState(false);
@@ -49,6 +50,10 @@ export default function SearchAutocomplete() {
   return (
     <div className="search-autocomplete-container">
       <input value={searchParam} type="text" name="search-users" placeholder="Search Users Here" onChange={handleChange}/>
+    {
+        showDropdown && <Suggestions data={filteredUsers}/>
+    }
+    
     </div>
   );
 }
